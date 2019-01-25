@@ -16,6 +16,7 @@ class Comment < ApplicationRecord
   end
 
   def send_comment_email
+    puts "sending email"
     NotificationMailer.comment_added(self).deliver_now
   end
 
